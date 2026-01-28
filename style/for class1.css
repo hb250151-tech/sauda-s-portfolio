@@ -178,6 +178,7 @@ nav ul a{
     justify-content: center;
     margin-left: 230px;
     margin-right: 230px;
+    margin-bottom: 130px;
 }
 
 .skill-name-container{
@@ -187,7 +188,6 @@ nav ul a{
     padding: 30px;
     box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
     border-radius: 5px;
-    margin-bottom: 130px;
 }
 
 .skill-name-image{
@@ -298,4 +298,111 @@ footer a{
 
 footer textarea{
     height: 180px;
+}
+
+/* responsive media query */
+@media screen and (max-width: 600px) {
+    nav, .banner, .skill-name, .resume-container, footer, .about-items{
+        flex-direction: column;
+    }
+
+    .about, .about-items, .skill-discription, .skill-name, .skill-name-container, .resume-container, .resume-title, .nav-title{
+        margin: 20px;
+    }
+
+    header{
+        background-image: none;
+        padding: 0px;
+    }
+
+    .button-primary{
+        margin-top: 20px;
+    }
+
+    .banner-image{
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .banner, nav, .banner-greetings, .banner-title, .about-discription, nav ul{
+        margin: 0px;
+    }
+
+    .skill-name-image{
+        padding-top: 20px;
+    }
+
+    .skill, .footer-column{
+        margin-bottom: 50px;
+    }
+
+    .skill-name{
+        align-items: center;
+    }
+    
+    .about, .skill-name-container, footer, .banner{
+        padding: 0px 20px;
+    }
+
+    .container-discription, .paragraph-size{
+        width: 100%;
+    }
+    
+    footer{
+        gap: 0px;
+    }
+
+    input[type=text], [type=email], footer textarea {
+        height: 45px;
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .hide{
+        visibility: hidden;
+    }
+
+    header{
+        background-position: bottom left, bottom right;
+    }
+
+    .banner{
+        flex-direction: column;
+    }
+
+    .banner, nav{
+        margin: 0px 100px;
+    }
+
+    .banner-greetings{
+        margin-top: 80px;
+    }
+
+    .banner-image{
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .about{
+        margin: 130px;
+        padding: 130px;
+    }
+
+    .about-items{
+        margin: 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-name{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-discription{
+        margin: 50px;
+    }
 }
